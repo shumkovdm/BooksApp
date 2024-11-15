@@ -1,0 +1,39 @@
+﻿<Window x:Class="BooksApp.BookEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование книги" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Название:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding Title}" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Автор:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding Author}" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Год:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding Year}" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Жанр:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding Genre}" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Страницы:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <TextBox Text="{Binding Pages}" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Сохранить" Width="100" Margin="5" Click="SaveButton_Click"/>
+            <Button Content="Отменить" Width="100" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
